@@ -7,20 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
+
 
 namespace Restaurant_AD0646
 {
     public partial class Form1 : Form
+        
     {
+       
         private string username;
         public Form1()
         {
             InitializeComponent();
-        //    User.user1 = new Uesr(1. "mostafa jazini", "1234");
-          //  User.user2 = new Uesr(2. "mohamad jazini", "1234");
 
-            //UsersList.Add(user1);
-//            UsersList.Add(user2);
+       
 
         }
 
@@ -36,9 +38,9 @@ namespace Restaurant_AD0646
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = textBox2.Text;
-            string password = textBox3.Text;
-            if(textBox2.Text=="mostafa"&&textBox3.Text=="12345")
+           /* string username = txtUsername.Text;
+            string password = txtPassword.Text;
+            if(txtUsername.Text=="mostafa"&&txtPassword.Text=="12345")
             {
                 new Form2().Show();
                 this.Hide();
@@ -46,10 +48,28 @@ namespace Restaurant_AD0646
             else
             {
                 MessageBox.Show("The User name or password you entered is incorrect, try again");
-                textBox2.Clear();
-                textBox3.Clear();
-                textBox2.Focus();
+                
+
+            }*/
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\GTTCO\OneDrive\سطح المكتب\DB.mdf;Integrated Security=True;Connect Timeout=30");
+            string query = "Select * from tb1_login Where username = '" + txtUsername.Text.Trim() + "' and password='" + txtPassword.Text.Trim() + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
+            DataTable dtbl = new DataTable();
+            sda.Fill(dtbl);
+            if(dtbl.Rows.Count==1)
+            {
+                new Form2().Show();
+                this.Hide();
+                
+            }
+            else
+            {
+                MessageBox.Show("Check your Username and password ");
+               // txtUsername.Clear();
+               // txtPassword.Clear();
+               // txtUsername.Focus();
             }
         }
+
     }
 }
