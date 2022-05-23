@@ -57,9 +57,9 @@ namespace Restaurant_AD0646
             this.label2.ForeColor = System.Drawing.Color.Gold;
             this.label2.Location = new System.Drawing.Point(44, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 23);
+            this.label2.Size = new System.Drawing.Size(54, 23);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Only";
+            this.label2.Text = "Offer";
             // 
             // label3
             // 
@@ -92,8 +92,9 @@ namespace Restaurant_AD0646
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(254, 39);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Order New";
+            this.button1.Text = "Get it";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -116,7 +117,7 @@ namespace Restaurant_AD0646
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "FistCustomControl";
-            this.Size = new System.Drawing.Size(770, 413);
+            this.Size = new System.Drawing.Size(806, 556);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

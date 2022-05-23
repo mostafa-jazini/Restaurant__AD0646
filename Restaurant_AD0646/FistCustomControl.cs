@@ -28,5 +28,10 @@ namespace Restaurant_AD0646
             {
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("The price of the meal is 25 JD .");
+        }
     }
 }

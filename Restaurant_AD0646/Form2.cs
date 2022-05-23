@@ -19,7 +19,8 @@ namespace Restaurant_AD0646
             InitializeComponent();
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
-         //   FistCustomControl1.BringToFront();
+            fistCustomControl1.BringToFront();
+          
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace Restaurant_AD0646
         {
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
-         //   FistCustomControl1().BringToFront();
+            fistCustomControl1.BringToFront();
 
 
         }
@@ -45,9 +46,34 @@ namespace Restaurant_AD0646
         {
             SidePanel.Height = button2.Height;
             SidePanel.Top = button2.Top;
-        //    my2nd().BringToFront();
+            my2nd1.BringToFront();
 
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void my2nd1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void fistCustomControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void my2nd1_Load_1(object sender, EventArgs e)
+        {
+         
         }
     }
 }
